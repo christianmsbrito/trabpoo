@@ -1,0 +1,13 @@
+.card {
+    border: none;
+    border-radius: 20px;
+    min-height:  518px;
+}
+
+.card:hover {
+    background: azure;
+}
+
+.container-fluid {
+    padding: 0;
+}
