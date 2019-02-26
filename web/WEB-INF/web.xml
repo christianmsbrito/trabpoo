@@ -8,6 +8,10 @@
         <servlet-name>JurosSimples</servlet-name>
         <servlet-class>br.com.trabpoo.servlets.JurosSimples</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>JurosCompostos</servlet-name>
+        <servlet-class>br.com.trabpoo.servlets.JurosCompostos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>JurosSimples</servlet-name>
         <url-pattern>/juros-simples</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JurosCompostos</servlet-name>
+        <url-pattern>/juros-compostos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

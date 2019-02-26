@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author chris
  */
-@WebServlet("/calcjuros")
+@WebServlet("/calcjurossimples")
 public class JurosSimples extends HttpServlet {
 
     /**
@@ -45,9 +45,9 @@ public class JurosSimples extends HttpServlet {
         if (!(amount > 0 && interest > 0 && time > 0)) {
             response.setStatus(400);
         }
-        request.setAttribute("amount", amount);
-        request.setAttribute("interest", interest);
-        request.setAttribute("time", time);
+        amount += amount*(interest/100)*time;
+        String res = "O montante ao final de " + time + " meses é de R$" + amount;
+        request.setAttribute("res", res);
         view.forward(request, response);
     }
 

@@ -1,14 +1,15 @@
 <%-- 
-    Document   : juros-simples
-    Created on : 24/02/2019, 23:59:08
+    Document   : juros-compostos
+    Created on : 26/02/2019, 00:37:26
     Author     : chris
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="br.com.trabpoo.servlets.JurosCompostos"%>  
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Calculo de juros simples</title>
+        <title>Calculo de juros compostos</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,7 @@
         <div class="row">
             <div class="col-6 ml-auto mr-auto">
                 <div class="row">
-                    <form class="mt-5" name="myform" action="${pageContext.request.contextPath}/calcjurossimples" method="post">
+                    <form class="mt-5" name="myform" action="${pageContext.request.contextPath}/juros-compostos.jsp" method="post">
                         <div class="form-row">
                             <div class="col-6">
                                 <input type="number" step="0.01" min=0 class="form-control" name="amount" placeholder="valor inicial depositado">
@@ -47,7 +48,17 @@
                             </div>
                         </div>
                     </form>
-                        <h3 class="ml-auto mr-auto mt-5">${res}</h3>
+                    <%   
+                        JurosCompostos jc = new JurosCompostos();
+                        Double[] a = jc.getValues();
+                        
+                        for(int i=0; i < a.length; i++){
+                    %>
+                    
+                    a
+                    
+                    <%}%>
+                    
                 </div>
 
             </div> 
